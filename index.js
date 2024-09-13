@@ -1,12 +1,13 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import "dotenv/config";
 
 const app = express();
-const port = 3000;
+const port = process.env.port;
 const headerData = {
-  "x-rapidapi-host": "bhagavad-gita3.p.rapidapi.com",
-  "x-rapidapi-key": "dd580d6bc6msh766841a9fe110fcp1480bcjsn2506daa2e22e",
+  "x-rapidapi-host": process.env.hostKey,
+  "x-rapidapi-key": process.env.apiKey,
 };
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("./public"));
