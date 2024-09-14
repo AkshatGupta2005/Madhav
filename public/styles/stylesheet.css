@@ -1,0 +1,79 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.amita-regular {
+  font-family: "Amita", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.m-plus-1p-thin {
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.m-plus-1p-light {
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.m-plus-1p-regular {
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.m-plus-1p-medium {
+  font-family: "M PLUS 1p", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+.anek-devanagari {
+  font-family: "Anek Devanagari", system-ui;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.ubuntu-condensed-regular {
+  font-family: "Ubuntu Condensed", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+footer{
+    text-align: center;
+}
+.headContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerFunction{
+    display: inline-flex;
+    list-style: none;
+    justify-self: flex-end;
+}
+
+.listElement{
+    font-size: 1.4em;
+}
+.heading{
+    font-size: 1.7em;
+    justify-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+img{
+  mix-blend-mode:multiply;
+}
+body{
+  background-color: orange;
+}

@@ -15,9 +15,10 @@ app.use(express.static("./public"));
 app.get("/", async (req, res) => {
   try {
     const response = await axios.get(
-      "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/?skip=5&limit=18",
+      "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/?skip=18&limit=18",
       { headers: headerData }
     );
+    res.render("index.ejs");
     console.log(response.data);
   } catch (error) {
     console.error("Error : ", error.message);
