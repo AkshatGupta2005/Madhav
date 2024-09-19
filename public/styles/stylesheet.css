@@ -32,7 +32,6 @@
   font-family: "M PLUS 1p", system-ui;
   font-weight: 500;
   font-style: normal;
-  font-size: 1em;
 }
 .anek-devanagari {
   font-family: "Anek Devanagari", system-ui;
@@ -59,6 +58,7 @@ footer {
   border-bottom: 0.2em solid #00712d;
   background-color: #d5ed9f;
   color: #00712d;
+  z-index: 99;
 }
 
 .headerFunction {
@@ -193,17 +193,96 @@ footer {
   top: 0px;
   height: 5em;
 }
-.quoteBox{
+.quoteBox {
   text-align: center;
-  background-color: #C1E2A4;
+  background-color: #c1e2a4;
   padding: 1em;
   margin: 1em;
   border-radius: 1em;
   font-size: 1.2em;
   color: #00712d;
 }
-span{
-  color: #FF6600;
+.orange {
+  color: #ff6600;
+}
+.chapterDiv {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  margin-right: 1em;
+  scroll-behavior: smooth;
+}
+.chapterHeading {
+  text-align: center;
+  font-size: 2em;
+  margin: 1em;
+  margin-top: 0.5em;
+  color: #00712d;
+}
+.chapterImagesContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #c1e2a4;
+  padding: 1em;
+  padding-left: 2em;
+  flex-wrap: nowrap;
+  border-radius: 1em;
+  padding-right: 3em;
+  scroll-behavior: smooth;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.imageBox {
+  display: flex;
+  user-select: none;
+  overflow-x: hidden;
+  -webkit-user-drag: none;
+  scroll-behavior: smooth;
+}
+
+.chapterImageDiv {
+  background-color: wheat;
+  margin: 1em;
+  padding: 0.3em;
+  padding-bottom: 0.2em;
+  border-radius: 0.8em;
+  list-style: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.chapterImg {
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  height: auto;
+  mix-blend-mode: multiply;
+  border-radius: 0.65em;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+.scrollBar{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.scrollBarProgress{
+  width: 50%;
+  height: 1em;
+  background-color: wheat;
+  border-radius: 10px;
+}
+.progressBar{
+  height: 100%;
+  background-color: #ff6600;
+  width: 10%;
+  border-radius: 10px;
+}
+.material-symbols-outlined {
+  color: #ff6600;
 }
 @media screen and (max-width: 600px) {
   .headerFunction {
