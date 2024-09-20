@@ -1,6 +1,8 @@
 var loadingScreen = document.querySelector(".loading");
 window.addEventListener("load", function () {
   loadingScreen.style.display = "none";
+  defaultProgress = (window.innerWidth / imgBox.scrollWidth) * 100;
+  scrollBarProgress();
 });
 const menu_toggle = document.querySelector(".toggle");
 const sidebar = document.querySelector(".sidebar");
@@ -11,7 +13,9 @@ menu_toggle.addEventListener("click", () => {
 });
 
 const imgBox = document.querySelector(".imageBox");
+var defaultProgress;
 const arrowBtn = document.querySelectorAll(".arrow div");
+var defaultProgress = document.client;
 var previousTouch;
 var isDragging = false;
 const dragging = (e) => {
@@ -21,17 +25,17 @@ const dragging = (e) => {
   scrollBarProgress();
 };
 const mobileDragging = (e) => {
-  if(isDragging = true){
-  const touch = e.touches[0];
-  if(previousTouch){
-    e.movementX = previousTouch.pageX - touch.pageX;
-    e.movementY = touch.pageY - previousTouch.pageY;
-    imgBox.scrollLeft = imgBox.scrollLeft + e.movementX;
+  if ((isDragging = true)) {
+    const touch = e.touches[0];
+    if (previousTouch) {
+      e.movementX = previousTouch.pageX - touch.pageX;
+      e.movementY = touch.pageY - previousTouch.pageY;
+      imgBox.scrollLeft = imgBox.scrollLeft + e.movementX;
+    }
+    previousTouch = touch;
+    scrollBarProgress();
   }
-  previousTouch = touch;
-  scrollBarProgress();
-}
-}
+};
 const dragStop = () => {
   previousTouch = null;
   isDragging = false;
@@ -45,8 +49,13 @@ document.addEventListener("mouseup", dragStop);
 document.addEventListener("touchend", dragStop);
 
 var scrollBarProgress = () => {
-  var progressBar =document.querySelector(".progressBar");
-  var progress = 10 + (imgBox.scrollLeft/imgBox.scrollWidth)*100;
-  progressBar.style.width = progress + "%";
+  var progressBar = document.querySelector(".progressBar");
+  var progress =
+    defaultProgress + (imgBox.scrollLeft / imgBox.scrollWidth) * 100;
+  if (progress > 100) {
+    progressBar.style.width = "100%";
+  } else {
+    progressBar.style.width = progress + "%";
+  }
   console.log(progress);
-}
+};

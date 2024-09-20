@@ -202,14 +202,21 @@ footer {
   font-size: 1.2em;
   color: #00712d;
 }
+.quoteWriter{
+  text-align: right !important;
+  margin-right: 3rem;
+}
+.quoteWriterB{
+  margin-right: 1rem;
+}
 .orange {
   color: #ff6600;
 }
 .chapterDiv {
   display: flex;
   flex-direction: column;
-  margin-left: 1em;
-  margin-right: 1em;
+  margin-left: 1.2em;
+  margin-right: 1.2em;
   scroll-behavior: smooth;
 }
 .chapterHeading {
@@ -221,11 +228,11 @@ footer {
 }
 .chapterImagesContainer {
   position: relative;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: #c1e2a4;
   padding: 1em;
+  padding-right: 0.5em;
   padding-left: 2em;
   flex-wrap: nowrap;
   border-radius: 1em;
@@ -252,10 +259,14 @@ footer {
   user-select: none;
   -webkit-user-drag: none;
 }
+.chapterImageDiv a {
+  user-select: none;
+  -webkit-user-drag: none;
+}
 .chapterImg {
   width: 100%;
   max-width: 400px;
-  min-width: 200px;
+  min-width: 180px;
   height: auto;
   mix-blend-mode: multiply;
   border-radius: 0.65em;
