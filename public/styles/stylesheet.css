@@ -120,8 +120,8 @@ footer {
   position: fixed;
   top: 0.8em;
   right: 1em;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   margin-right: 1em;
   border-radius: 99px;
   cursor: pointer;
@@ -129,7 +129,8 @@ footer {
 
 .hamburger {
   position: relative;
-  top: calc(50% - 2px);
+  margin-top: 0.2em;
+  top: calc(50% - 13px);
   left: 50%;
   transform: translate(-50%, -50%);
   width: 32px;
@@ -202,12 +203,13 @@ footer {
   font-size: 1.2em;
   color: #00712d;
 }
-.quoteWriter{
+.quoteWriter {
   text-align: right !important;
   margin-right: 3rem;
 }
-.quoteWriterB{
+.quoteWriterB {
   margin-right: 1rem;
+  text-align: right;
 }
 .orange {
   color: #ff6600;
@@ -228,18 +230,16 @@ footer {
 }
 .chapterImagesContainer {
   position: relative;
-  flex-direction: column;
-  justify-content: center;
   background-color: #c1e2a4;
   padding: 1em;
   padding-right: 0.5em;
   padding-left: 2em;
-  flex-wrap: nowrap;
   border-radius: 1em;
   padding-right: 3em;
   scroll-behavior: smooth;
   user-select: none;
   -webkit-user-drag: none;
+  white-space: nowrap;
 }
 .imageBox {
   display: flex;
@@ -265,32 +265,57 @@ footer {
 }
 .chapterImg {
   width: 100%;
-  max-width: 400px;
-  min-width: 180px;
+  min-width: 230px;
   height: auto;
   mix-blend-mode: multiply;
   border-radius: 0.65em;
   user-select: none;
   -webkit-user-drag: none;
 }
-.scrollBar{
+.scrollBar {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
-.scrollBarProgress{
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
   width: 50%;
-  height: 1em;
-  background-color: wheat;
-  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 8px;
 }
-.progressBar{
-  height: 100%;
-  background-color: #ff6600;
-  width: 10%;
-  border-radius: 10px;
+.slider::-webkit-slider-runnable-track {
+  height: 1em;
+  background: wheat;
+  border-radius: 8px;
+}
+.slider::-moz-range-track {
+  height: 1em;
+  background: wheat;
+  border-radius: 8px;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 1em;
+  width: 1em;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  border: 2px solid #00712d;
+  box-shadow: -600px 0 0 593px #00712d;
+}
+
+.slider::-moz-range-thumb {
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #f50;
+  box-shadow: -407px 0 0 400px #f50;
 }
 .material-symbols-outlined {
   color: #ff6600;
@@ -319,6 +344,25 @@ footer {
     width: 5em;
     position: absolute;
     padding: 2em;
+  }
+  .chapterImg {
+    min-width: 180px;
+  }
+  .headContainer {
+    height: 3em;
+  }
+  .logoImg {
+    height: 2.7em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    margin-top: 0.3em;
+    margin-bottom: 0em;
+  }
+  .heading {
+    font-size: 1.8em;
+  }
+  .headerDiv {
+    height: 3em;
   }
 }
 @keyframes l1 {

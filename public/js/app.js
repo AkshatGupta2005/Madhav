@@ -1,8 +1,6 @@
 var loadingScreen = document.querySelector(".loading");
 window.addEventListener("load", function () {
   loadingScreen.style.display = "none";
-  defaultProgress = (window.innerWidth / imgBox.scrollWidth) * 100;
-  scrollBarProgress();
 });
 const menu_toggle = document.querySelector(".toggle");
 const sidebar = document.querySelector(".sidebar");
@@ -22,7 +20,7 @@ const dragging = (e) => {
   if (!isDragging) return;
   imgBox.scrollLeft -= e.movementX;
   imgBox.style.cursor = "grabbing";
-  scrollBarProgress();
+  scrollBar.value = imgBox.scrollLeft;
 };
 const mobileDragging = (e) => {
   if ((isDragging = true)) {
@@ -31,9 +29,9 @@ const mobileDragging = (e) => {
       e.movementX = previousTouch.pageX - touch.pageX;
       e.movementY = touch.pageY - previousTouch.pageY;
       imgBox.scrollLeft = imgBox.scrollLeft + e.movementX;
+      scrollBar.value = imgBox.scrollLeft;
     }
     previousTouch = touch;
-    scrollBarProgress();
   }
 };
 const dragStop = () => {
@@ -48,14 +46,11 @@ imgBox.addEventListener("touchmove", mobileDragging);
 document.addEventListener("mouseup", dragStop);
 document.addEventListener("touchend", dragStop);
 
-var scrollBarProgress = () => {
-  var progressBar = document.querySelector(".progressBar");
-  var progress =
-    defaultProgress + (imgBox.scrollLeft / imgBox.scrollWidth) * 100;
-  if (progress > 100) {
-    progressBar.style.width = "100%";
-  } else {
-    progressBar.style.width = progress + "%";
-  }
-  console.log(progress);
-};
+const scrollBar = document.querySelector(".slider");
+var screenWidth = imgBox.offsetWidth;
+var scrollWidth = imgBox.scrollWidth;
+scrollBar.min = 0;
+scrollBar.max = scrollWidth - screenWidth;
+scrollBar.addEventListener("input", (event) => {
+  imgBox.scrollLeft = event.target.value;
+});
