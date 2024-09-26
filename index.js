@@ -13,18 +13,21 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("./public"));
 
 app.get("/", async (req, res) => {
+    res.render("index.ejs");
+});
+app.get("/chapters/:chapterNumber/:lang", async (req, res) => {
   try {
+    const chapterNumber = req.params.chapterNumber;
+    const language = req.params.lang;
     const response = await axios.get(
-      "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/?skip=18&limit=18",
+      "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/" + chapterNumber+ "/",
       { headers: headerData }
     );
-    res.render("index.ejs");
-    console.log(response.data);
+    res.render("chapters.ejs", {chapterData: response.data, language: language});
   } catch (error) {
     console.error("Error : ", error.message);
   }
 });
-
 app.listen(port, () => {
   console.log(`Jai shree krishna, Server active at ${port}`);
 });

@@ -1,0 +1,65 @@
+<%- include('./partials/header.ejs') %> <% if (locals.chapterData) { %>
+<div class="chapterDetail">
+  <div class="m-plus-1p-medium chapterDeatailHeading chapterNumber">
+    Chapter - <%= chapterData.chapter_number%>
+  </div>
+  <div class="amita-regular chapterName"><%= chapterData.name %></div>
+  <div class="m-plus-1p-medium chapterDeatailHeading chapterNameTranslated">
+    <%= chapterData.name_transliterated%>
+  </div>
+</div>
+<h2 class="chapterHeading m-plus-1p-medium">Chapter Summary</h2>
+<div class="chapterSummaryDiv">
+  <div class="chapterSummary">
+    <div class="langTabDiv">
+      <a href="/chapters/<%= chapterData.chapter_number %>/hindi"
+        >
+        <div class="anek-devanagari hindi langTab <% if (locals.language == "hindi") { %>
+         <%= "choosen" %>
+        <% } %>">
+          हिन्दी
+        </div>
+        </a>
+      <a href="/chapters/<%= chapterData.chapter_number %>/english"
+        ><div class="m-plus-1p-medium english langTab <% if (locals.language == "english") { %>
+         <%= "choosen" %>
+        <% } %>">English</div></a
+      >
+    </div>
+
+    <div>
+      <% if (locals.language == "hindi") { %>
+      <div class="anek-devanagari hindiSummary summaryTab">
+        <%= chapterData.chapter_summary_hindi %>
+      </div>
+      <% } %> <% if (locals.language == "english") { %>
+      <div class="m-plus-1p-medium englishSumary summaryTab">
+        <%= chapterData.chapter_summary %>
+      </div>
+      <% } %>
+    </div>
+    <div class="buttonsContainer">
+      <div class="buttonsDiv">
+        <% if (chapterData.chapter_number > 1) { %>
+          <div class="previous"><a href="/chapters/<%= chapterData.chapter_number - 1 %>/<%= language %>" class="noDecoration"><div class="button ubuntu-condensed-regular"><span class="material-symbols-outlined">
+            arrow_back
+            </span>Prev</div></a>
+          </div>
+        <% } %>
+        <% if (chapterData.chapter_number <18) { %>
+          <div class="next">
+            <a href="/chapters/<%= chapterData.chapter_number +1 %>/<%= language %>" class="noDecoration"><div class="button next ubuntu-condensed-regular">Next <span class="material-symbols-outlined">
+              arrow_forward
+            </span></div></a>
+          </div>
+          <% } %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="versesContainer">
+  <div class="versesDiv">
+  </div>
+</div>
+<script src="/js/chapters.js"></script>
+<% } %> <%- include('./partials/footer.ejs') %>

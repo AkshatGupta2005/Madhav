@@ -53,4 +53,6 @@ scrollBar.min = 0;
 scrollBar.max = scrollWidth - screenWidth;
 scrollBar.addEventListener("input", (event) => {
   imgBox.scrollLeft = event.target.value;
+  console.log(languageTab);
 });
+
