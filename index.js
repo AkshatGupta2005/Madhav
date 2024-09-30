@@ -33,8 +33,44 @@ app.get("/chapters/:chapterNumber/:lang", async (req, res) => {
     console.error("Error : ", error.message);
   }
 });
-app.get("/verse/:verseNumber/:language", (req,res) =>{
-  res.render("verse.ejs");
+
+app.get("/verse/:chapterNumber/:verseNumber/:language/:verseCount",async (req, res) => {
+  try {
+    const chapterNumber = req.params.chapterNumber;
+    const verseNumber = req.params.verseNumber;
+    const language = req.params.language;
+    const verseCount = req.params.verseCount;
+    const response = await axios.get(
+      "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/" + chapterNumber + "/verses/" + verseNumber + "/",
+      { headers: headerData }
+    );
+    res.render("verse.ejs", {
+      verseData: response.data,
+      language: language,
+      verseCount: verseCount
+    });
+  } catch (error) {
+    console.error("Error : ", error.message);
+  }
+});
+app.post("/searchVerse/:chapterNumber/:language/:verseCount", async (req, res) => {
+  try {
+    const chapterNumber = req.params.chapterNumber;
+    const verseNumber = req.body.searchInput;
+    const language = req.params.language;
+    const verseCount = req.params.verseCount;
+    const response = await axios.get(
+      "https://bhagavad-gita3.p.rapidapi.com/v2/chapters/" + chapterNumber + "/verses/" + verseNumber + "/",
+      { headers: headerData }
+    );
+    res.render("verse.ejs", {
+      verseData: response.data,
+      language: language,
+      verseCount: verseCount
+    });
+  } catch (error) {
+    console.error("Error : ", error.message);
+  }
 });
 app.listen(port, () => {
   console.log(`Jai shree krishna, Server active at ${port}`);

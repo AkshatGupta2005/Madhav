@@ -1,4 +1,63 @@
 <%- include('./partials/header.ejs') %>
-
-
+<% if (locals.verseData) { %>
+    <div class="verseHeading">
+        <div class="verseTab m-plus-1p-medium">Chapter Number - <%= verseData.chapter_number %></div>
+        <div class="verseTab m-plus-1p-medium">Verse - <%= verseData.verse_number %>/<%= verseCount %></div>
+        <div class="verseTab textTab amita-regular orange "><%= verseData.text %></div>
+    </div>
+    <div class="chapterSummaryDiv">
+        <div class="chapterSummary">
+          <div class="langTabDiv">
+            <a href="/verse/<%= verseData.chapter_number %>/<%= verseData.verse_number %>/hindi/<%= verseCount %>"
+              >
+              <div class="anek-devanagari hindi langTab <% if (locals.language == "hindi") { %>
+               <%= "choosen" %>
+              <% } %>">
+                हिन्दी
+              </div>
+              </a>
+            <a href="/verse/<%= verseData.chapter_number %>/<%= verseData.verse_number %>/english/<%= verseCount %>"
+              ><div class="m-plus-1p-medium english langTab <% if (locals.language == "english") { %>
+               <%= "choosen" %>
+              <% } %>">English</div></a
+            >
+            <div class="search">
+              <form action="/searchVerse/<%= verseData.chapter_number%>/<%= language %>/<%=verseCount%>" method="post">
+                <input type="text" class="searchInput m-plus-1p-medium" placeholder="Search" name="searchInput" required>
+                <input type="submit" class="searchSubmit m-plus-1p-medium" value="Go">
+              </form>
+            </div>  
+          </div>
+          <div>
+            <% if (locals.language == "hindi") { %>
+            <div class="anek-devanagari hindiSummary summaryTab">
+                <%= verseData.commentaries[13].description %>
+            </div>
+            <% } %> <% if (locals.language == "english") { %>
+            <div class="m-plus-1p-medium englishSumary summaryTab">
+              <%= verseData.translations[0].description %>
+            </div>
+            <% } %>
+          </div>
+          <div class="buttonsContainer">
+            <div class="buttonsDiv">
+              <% if (verseData.verse_number > 1) { %>
+                <div class="previous"><a href="/verse/<%= verseData.chapter_number %>/<%= verseData.verse_number - 1 %>/<%= language %>/<%= verseCount %>" class="noDecoration"><div class="button ubuntu-condensed-regular"><span class="material-symbols-outlined">
+                  arrow_back
+                  </span>Prev</div></a>
+                </div>
+              <% } %>
+              <% if (verseData.verse_number < verseCount) { %>
+                <div class="next">
+                  <a href="/verse/<%= verseData.chapter_number %>/<%= verseData.verse_number + 1 %>/<%= language %>/<%= verseCount %>" class="noDecoration"><div class="button next ubuntu-condensed-regular">Next <span class="material-symbols-outlined">
+                    arrow_forward
+                  </span></div></a>
+                </div>
+                <% } %>
+            </div>
+          </div>
+        </div>
+      </div>
+<% } %>
+<script src="/js/app.js"></script>  
 <%- include('./partials/footer.ejs') %>

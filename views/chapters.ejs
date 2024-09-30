@@ -61,13 +61,13 @@
     <h3 class="chapterHeading m-plus-1p-medium verseHeading1">Read Verse</h2>
     <h4 class="chapterHeading m-plus-1p-medium verseHeading2">Pick a language</h3>
     <div class="langTabDiv verseTabDiv ">
-      <a href="/verse/1/hindi">
+      <a href="/verse/<%=chapterData.chapter_number%>/1/hindi/<%= chapterData.verses_count%>">
         <div class="anek-devanagari hindi langTab hindiVerse">हिन्दी</div>
       </a>
-      <a href="/verse/1/english">
+      <a href="/verse/<%=chapterData.chapter_number%>/1/english/<%= chapterData.verses_count%>">
         <div class="m-plus-1p-medium english langTab englishVerse">English</div>
       </a>
     </div>
 </div>
-<script src="/js/chapters.js"></script>
+<script src="/js/app.js"></script>
 <% } %> <%- include('./partials/footer.ejs') %>

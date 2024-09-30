@@ -71,7 +71,6 @@ body {
   font-style: normal;
 }
 
-
 footer {
   text-align: center;
 }
@@ -244,9 +243,7 @@ footer {
   margin-right: 1rem;
   text-align: right;
 }
-.orange {
-  color: #ff6600;
-}
+
 .chapterDiv {
   display: flex;
   flex-direction: column;
@@ -306,41 +303,41 @@ footer {
   user-select: none;
   -webkit-user-drag: none;
 }
-.innerImgDiv{
+.innerImgDiv {
   width: 100%;
-  height: 100%; 
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.innerLogoImg{
+.innerLogoImg {
   height: auto;
   width: 60%;
   margin-bottom: 1%;
   user-select: none;
   -webkit-user-drag: none;
 }
-.innerHeading{
+.innerHeading {
   font-size: 3em;
-  color: #015C25;
+  color: #015c25;
   margin-bottom: 6%;
   user-select: none;
   -webkit-user-drag: none;
 }
-.innerChapterNumber{
+.innerChapterNumber {
   font-size: 3em;
   color: #ff6600;
   margin-bottom: 6%;
   user-select: none;
   -webkit-user-drag: none;
 }
-.innerChapterSummary{
+.innerChapterSummary {
   font-size: 1.8em;
-  color: #6E9C06;
+  color: #6e9c06;
   margin-bottom: 6%;
   user-select: none;
-  -webkit-user-drag: none;  
+  -webkit-user-drag: none;
 }
 .scrollBar {
   width: 100%;
@@ -430,6 +427,7 @@ footer {
 .langTabDiv {
   display: flex;
   text-decoration: none;
+  position: relative;
 }
 .langTabDiv a {
   text-decoration: none;
@@ -455,13 +453,13 @@ footer {
   margin-right: 0.7em;
   margin-left: 0.5em;
 }
-.choosen{
+.choosen {
   margin-bottom: 0px;
   height: 70%;
   border-bottom: 0px;
   border-radius: 10px 10px 0px 0px;
 }
-.summaryTab { 
+.summaryTab {
   height: auto;
   padding: 0.8em;
   background-color: #d5ed9f;
@@ -472,17 +470,17 @@ footer {
   text-align: center;
   font-weight: 400;
 }
-.buttonsContainer{
+.buttonsContainer {
   width: 100%;
   height: 5em;
 }
-.buttonsDiv{
+.buttonsDiv {
   position: relative;
   display: flex;
   text-decoration: none;
   width: 100%;
 }
-.button{
+.button {
   background-color: #d5ed9f;
   width: 5em;
   height: 3em;
@@ -494,30 +492,83 @@ footer {
   color: #00712d;
   border: 1px solid #00712d;
 }
-.previous{
+.previous {
   position: absolute;
   left: 0;
 }
-.next{
+.next {
   position: absolute;
   right: 0;
 }
-.noDecoration{
+.noDecoration {
   text-decoration: none;
 }
-.verseHeading1{
+.verseHeading1 {
   margin-bottom: 0.2em;
 }
-.verseHeading2{
+.verseHeading2 {
   font-size: 1.2em;
   margin-top: 0.2em;
 }
-.verseTabDiv{
+.verseTabDiv {
   display: flex;
   justify-content: center;
 }
-.hindiVerse{
+.hindiVerse {
   margin-left: 0px;
+}
+.verseHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.verseTab {
+  text-align: center;
+  font-size: 1.7em;
+  width: fit-content;
+  height: auto;
+  background-color: #d5ed9f;
+  color: #00712d;
+  border: 1px solid #00712d;
+  border-radius: 50px;
+  margin: 0.5em 0.5em 0 0.5em;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+}
+.textTab{
+  margin: 0em;
+  width: 79%;
+  padding: 0.5em 0.1em 0.5em 0.1em;
+  border-radius: 10px;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+}
+.search{
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 4em;
+}
+.searchInput{
+  width: 4em;
+  height: 1.5em;
+  padding: 0.5em;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  border:1px solid #00712d;
+  background-color: #d5ed9f;
+  color: #00712d;
+  border-radius: 30px 0px 0px 30px;
+}
+.searchSubmit{
+  text-align: center;
+  width: 3em;
+  height: 2.5em;
+  padding: 0.5em;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+  background-color: #00712d;
+  color: whitesmoke;
+  border-radius: 0px 30px 30px 0px;
 }
 @media screen and (max-width: 600px) {
   .headerFunction {
@@ -566,32 +617,35 @@ footer {
   .chapterHeading {
     font-size: 1.5em;
   }
-  .langTabDiv{
+  .langTabDiv {
     justify-content: center;
   }
-  .hindi{
+  .hindi {
     margin-left: 0.2em;
   }
-  .innerHeading{
+  .innerHeading {
     font-size: 2.5em;
     margin-bottom: 3%;
   }
-  .innerChapterNumber{
+  .innerChapterNumber {
     font-size: 2.5em;
     margin-bottom: 3%;
   }
-  .innerChapterSummary{
+  .innerChapterSummary {
     font-size: 1.5em;
   }
-  .verseHeading1{
+  .verseHeading1 {
     margin-top: 0.5em;
   }
-  .verseHeading2{
+  .verseHeading2 {
     font-size: 1em;
     margin-top: 0.2em;
   }
-  .hindiVerse{
+  .hindiVerse {
     margin-left: 0px;
+  }
+  .verseTab{
+    font-size: 1.2em;
   }
 }
 @keyframes l1 {
@@ -610,4 +664,7 @@ footer {
   100% {
     background-size: 20% 100%, 20% 100%, 20% 100%;
   }
+}
+.orange {
+  color: #ff6600;
 }
