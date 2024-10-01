@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: #f5f5dc;
 }
 
 .amita-regular {
@@ -427,7 +427,6 @@ footer {
 .langTabDiv {
   display: flex;
   text-decoration: none;
-  position: relative;
 }
 .langTabDiv a {
   text-decoration: none;
@@ -534,7 +533,12 @@ footer {
   margin: 0.5em 0.5em 0 0.5em;
   padding: 0.2em 0.5em 0.2em 0.5em;
 }
-.textTab{
+.verseHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+}
+.textTab {
   margin: 0em;
   width: 79%;
   padding: 0.5em 0.1em 0.5em 0.1em;
@@ -542,33 +546,48 @@ footer {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
 }
-.search{
-  position: absolute;
-  right: 0;
-  top: 0;
+.search {
   height: 4em;
+  margin-left: 2em;
+  display: flex;
+  justify-content: center;
 }
-.searchInput{
+.searchInput {
   width: 4em;
   height: 1.5em;
   padding: 0.5em;
   font-size: 1.3em;
   margin-bottom: 0.5em;
-  border:1px solid #00712d;
+  border: 1px solid #00712d;
   background-color: #d5ed9f;
   color: #00712d;
   border-radius: 30px 0px 0px 30px;
 }
-.searchSubmit{
+.searchSubmit {
   text-align: center;
   width: 3em;
   height: 2.5em;
   padding: 0.5em;
   font-size: 1.3em;
   margin-bottom: 0.5em;
+  margin-right: 0.5em;
   background-color: #00712d;
   color: whitesmoke;
   border-radius: 0px 30px 30px 0px;
+}
+.authorDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.authorPhoto {
+  height: auto;
+  width: 15em;
+  border-radius: 50px;
+}
+.authorSummary {
+  margin-top: 0.5em;
+  width: 78%;
 }
 @media screen and (max-width: 600px) {
   .headerFunction {
@@ -644,8 +663,15 @@ footer {
   .hindiVerse {
     margin-left: 0px;
   }
-  .verseTab{
+  .verseTab {
     font-size: 1.2em;
+  }
+  .verseHeader {
+    justify-content: center;
+  }
+  .search {
+    width: 100%;
+    margin: 0;
   }
 }
 @keyframes l1 {
