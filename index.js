@@ -15,6 +15,20 @@ app.use(express.static("./public"));
 app.get("/", async (req, res) => {
   res.render("index.ejs");
 });
+app.get("/chapters", (req,res) => {
+  res.render("chapters.ejs")
+})
+app.post("/searchChapter",(req, res) => {
+    const chapterNumber = req.body.chapterNumber;
+    const language = req.body.language;
+    if(chapterNumber < 19 && chapterNumber > 0){
+    res.redirect("/chapters/" + chapterNumber + "/" + language);
+    }
+    else{
+      res.redirect("/chapters");
+    }  
+});
+
 app.get("/chapters/:chapterNumber/:lang", async (req, res) => {
   try {
     const chapterNumber = req.params.chapterNumber;

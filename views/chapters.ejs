@@ -58,8 +58,8 @@
   </div>
 </div>
 <div class="versesContainer">
-    <h3 class="chapterHeading m-plus-1p-medium verseHeading1">Read Verse</h2>
-    <h4 class="chapterHeading m-plus-1p-medium verseHeading2">Pick a language</h3>
+    <h3 class="chapterHeading m-plus-1p-medium verseHeading1">Read Verse</h3>
+    <h4 class="chapterHeading m-plus-1p-medium verseHeading2">Pick a language</h4>
     <div class="langTabDiv verseTabDiv ">
       <a href="/verse/<%=chapterData.chapter_number%>/1/hindi/<%= chapterData.verses_count%>">
         <div class="anek-devanagari hindi langTab hindiVerse">हिन्दी</div>
@@ -69,5 +69,24 @@
       </a>
     </div>
 </div>
+<% } else { %>
+  <div class="chapterDetail">
+    <div class="verseTab amita-regular orange ">।। श्री कृष्ण सदा सहायते ।।</div>
+    <h2 class="chapterHeading m-plus-1p-medium verseHeading1">Search Chapters</h2>
+    <h4 class="chapterHeading m-plus-1p-medium verseHeading2">Search By Number</h4>
+  </div>
+  <div class="searchBar">
+    <div class="search">
+      <form action="/searchChapter" method="post">
+        <input type="text" class="searchInput m-plus-1p-medium" placeholder="Search" name="chapterNumber" required>
+        <select name="language" class="languageSearch" required>
+          <option value="english">English</option>
+          <option value="hindi">हिन्दी</option>
+        </select>
+        <input type="submit" class="searchSubmit m-plus-1p-medium chapterSubmit" value="Go">
+      </form>
+    </div>
+  </div>
+  <% } %>
 <script src="/js/app.js"></script>
-<% } %> <%- include('./partials/footer.ejs') %>
+ <%- include('./partials/footer.ejs') %>

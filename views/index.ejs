@@ -20,20 +20,20 @@
   <div class="chapterImagesContainer">
     <ul class="imageBox">
       <% for( let index = 1; index < 19; index++ ) { %>
-        <li class="chapterImageDiv">
-          <a href="/chapters/<%= index %>/hindi" class="chapterLink">
-            <div class="chapterImg">
-              <div class="innerImgDiv">
-                <img src="./images/logo.png" alt="Logo" class="innerLogoImg" />
-                <div class="innerHeading amatic-sc-bold">Madhav</div>
-                <div class="innerChapterNumber amatic-sc-bold"><%= index %></div>
-                <div class="innerChapterSummary shadows-into-light-regular">
-                  Chapter Summary
-                </div>
+      <li class="chapterImageDiv">
+        <a href="/chapters/<%= index %>/hindi" class="chapterLink">
+          <div class="chapterImg">
+            <div class="innerImgDiv">
+              <img src="/images/logo.png" alt="Logo" class="innerLogoImg" />
+              <div class="innerHeading amatic-sc-bold">Madhav</div>
+              <div class="innerChapterNumber amatic-sc-bold"><%= index %></div>
+              <div class="innerChapterSummary shadows-into-light-regular">
+                Chapter Summary
               </div>
             </div>
-          </a>
-        </li>
+          </div>
+        </a>
+      </li>
       <% } %>
     </ul>
     <div class="scrollBar">

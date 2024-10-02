@@ -589,6 +589,19 @@ footer {
   margin-top: 0.5em;
   width: 78%;
 }
+.languageSearch{
+  height: 2.5em;
+  border: 1px solid #00712d;
+  background-color: #d5ed9f;
+  color: #00712d;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+}
+.chapterSubmit{
+  margin-right: 0;
+}
 @media screen and (max-width: 600px) {
   .headerFunction {
     display: none;
