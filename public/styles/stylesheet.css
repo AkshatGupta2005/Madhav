@@ -7,7 +7,9 @@
 body {
   background-color: #f5f5dc;
 }
-
+.mainContainer {
+  position: relative;
+}
 .amita-regular {
   font-family: "Amita", serif;
   font-weight: 400;
@@ -566,7 +568,6 @@ footer {
 .searchSubmit {
   text-align: center;
   width: 3em;
-  height: 2.5em;
   padding: 0.5em;
   font-size: 1.3em;
   margin-bottom: 0.5em;
@@ -589,7 +590,7 @@ footer {
   margin-top: 0.5em;
   width: 78%;
 }
-.languageSearch{
+.languageSearch {
   height: 2.5em;
   border: 1px solid #00712d;
   background-color: #d5ed9f;
@@ -599,8 +600,148 @@ footer {
   margin-bottom: 0.5em;
   font-size: 1.3em;
 }
-.chapterSubmit{
-  margin-right: 0;
+.verseLanguageSearch {
+  height: 100%;
+  border: 1px solid #00712d;
+  background-color: #d5ed9f;
+  color: #00712d;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+  margin-bottom: 0.5em;
+  font-size: 1.3em;
+}
+
+.chapterSearch {
+  margin-left: 0;
+}
+.searchVerse {
+  border-radius: 0;
+  margin-left: 0.2em;
+}
+.verseSearchBar {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.verseSearch {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.part1,
+.part2 {
+  display: flex;
+}
+.part2 *,
+.part1 * {
+  margin-bottom: 0;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  margin-top: 2em;
+  background-color: #d5ed9f;
+  border-top: 3px solid #015c25;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footerLogo {
+  width: auto;
+  height: 5em;
+  margin-bottom: 0.1em;
+}
+.footerHeading {
+  margin-top: 0;
+  margin-bottom: 0.2em;
+}
+.footerOptions {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  width: 60%;
+  font-size: 1.3em;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.options {
+  text-decoration: none;
+  color: #00712d;
+  font-size: 0.9em;
+}
+.credits {
+  color: #00712d;
+  margin-bottom: 0.5em;
+}
+.copyRight {
+  padding-bottom: 1em;
+  color: #00712d;
+}
+.reviewBox {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headingReview {
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 0.3em;
+}
+.headingReview2 {
+  font-size: 1em;
+}
+.reviewForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+.formElement {
+  margin-top: 0.5em;
+  height: 1.7em;
+  background-color: whitesmoke;
+  color: #015c25;
+  font-size: 1.1em;
+  padding: 0.4em;
+  font-weight: 600;
+  width: 80%;
+  border-radius: 15px;
+  border: 1px solid #015c25;
+}
+.reviewText {
+  height: 15vh;
+  resize: vertical;
+}
+.submit {
+  width: auto;
+  height: auto;
+  background-color: #015c25;
+  color: whitesmoke;
+  padding: 0.4em 1em;
+  border-radius: 30px;
+}
+.webImage {
+  margin-top: 2vh;
+  width: auto;
+  height: 40vh;
+  border: 1px solid #00712d;
+}
+.chapterWebImage {
+  height: 60vh;
+}
+.EnglishAuthor {
+  margin-top: 1em;
+}
+.chapterNext {
+  width: 8em;
 }
 @media screen and (max-width: 600px) {
   .headerFunction {
@@ -620,7 +761,6 @@ footer {
     height: auto;
     transition: 0.2s linear;
   }
-
   .sidebar.is-active {
     top: 0;
     width: 5em;
@@ -685,6 +825,49 @@ footer {
   .search {
     width: 100%;
     margin: 0;
+  }
+  .footerLogo {
+    height: 4em;
+  }
+  .headingReview {
+    font-size: 1.3em;
+  }
+  .headingReview2 {
+    font-size: 0.9em;
+  }
+  .reviewForm {
+    width: 90%;
+  }
+  .formElement {
+    width: 100%;
+  }
+  .reviewText {
+    height: 25vh;
+  }
+  .webImage {
+    height: 45vh;
+  }
+  .chapterWebImage {
+    height: 45vh;
+  }
+}
+@media screen and (max-width: 470px) {
+  .verseSearch {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .part1 .searchVerse {
+    border-radius: 0 30px 30px 0;
+  }
+  .part2 .verseLanguageSearch {
+    border-radius: 30px 0 0 30px;
+  }
+  .part2 {
+    display: flex;
+    justify-content: center;
+  }
+  .part2 * {
+    height: auto;
   }
 }
 @keyframes l1 {

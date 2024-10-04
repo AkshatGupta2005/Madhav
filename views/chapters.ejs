@@ -1,4 +1,5 @@
-<%- include('./partials/header.ejs') %> <% if (locals.chapterData) { %>
+<%- include('./partials/header.ejs') %>
+<% if (locals.chapterData) { %>
 <div class="chapterDetail">
   <div class="m-plus-1p-medium chapterDeatailHeading chapterNumber">
     Chapter - <%= chapterData.chapter_number%>
@@ -70,13 +71,15 @@
     </div>
 </div>
 <% } else { %>
+
   <div class="chapterDetail">
+    <img src="/images/krishnaPngOrignal.jpeg" alt="Krishna Image" class="authorPhoto webImage chapterWebImage">
     <div class="verseTab amita-regular orange ">।। श्री कृष्ण सदा सहायते ।।</div>
     <h2 class="chapterHeading m-plus-1p-medium verseHeading1">Search Chapters</h2>
     <h4 class="chapterHeading m-plus-1p-medium verseHeading2">Search By Number</h4>
   </div>
   <div class="searchBar">
-    <div class="search">
+    <div class="search chapterSearch">
       <form action="/searchChapter" method="post">
         <input type="text" class="searchInput m-plus-1p-medium" placeholder="Search" name="chapterNumber" required>
         <select name="language" class="languageSearch" required>

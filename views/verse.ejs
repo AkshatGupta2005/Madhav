@@ -51,6 +51,12 @@
                   </span>Prev</div></a>
                 </div>
               <% } %>
+              <% if (verseData.verse_number == 1 && verseData.chapter_number != 1) { %>
+                <div class="previous"><a href="/nextChapter/<%= verseData.chapter_number - 1%>/<%= language %>%>" class="noDecoration"><div class="button chapterNext ubuntu-condensed-regular"><span class="material-symbols-outlined">
+                  arrow_back
+                  </span>Prev Chapter</div></a>
+                </div>
+              <% } %>
               <% if (verseData.verse_number < verseCount) { %>
                 <div class="next">
                   <a href="/verse/<%= verseData.chapter_number %>/<%= verseData.verse_number + 1 %>/<%= language %>/<%= verseCount %>" class="noDecoration"><div class="button next ubuntu-condensed-regular">Next <span class="material-symbols-outlined">
@@ -58,6 +64,14 @@
                   </span></div></a>
                 </div>
                 <% } %>
+                <% if (verseData.verse_number == verseCount && verseData.chapter_number != 18) { %>
+                  <div class="next">
+                    <a href="/nextChapter/<%= verseData.chapter_number + 1%>/<%= language %>" class="noDecoration"><div class="button next chapterNext ubuntu-condensed-regular">Next Chapter<span class="material-symbols-outlined">
+                      arrow_forward
+                    </span></div></a>
+                  </div>
+                  <% } %>
+                  
             </div>
           </div>
         </div>
@@ -89,6 +103,30 @@
         <% } %>
       </div>
       
+<% } else {%> 
+<div class="chapterDetail">
+    <img src="/images/krishnaPngOrignal2.jpeg" alt="Krishna Image" class="authorPhoto webImage">
+    <div class="verseTab amita-regular orange ">।। श्री कृष्णा शरणम ममः ।।</div>
+    <h2 class="chapterHeading m-plus-1p-medium verseHeading1">Search Verse</h2>
+    <h4 class="chapterHeading m-plus-1p-medium verseHeading2">Search By Chapter</h4>
+  </div>
+  <div class="verseSearchBar">
+    <form action="/searchVerse" method="post">
+      <div class="verseSearch chapterSearch">   
+        <div class="part1">
+          <input type="text" class="searchInput m-plus-1p-medium" placeholder="Chapter" name="chapterNumber" required>
+          <input type="text" class="searchInput m-plus-1p-medium searchVerse" placeholder="Verse" name="verseNumber" required>
+        </div>
+        <div class="part2">
+          <select name="language" class="verseLanguageSearch" required>
+            <option value="english">English</option>
+            <option value="hindi">हिन्दी</option>
+          </select>
+          <input type="submit" class="m-plus-1p-medium searchSubmit" value="Go">
+        </div>
+      </div>
+    </form>
+  </div>
 <% } %>
 <script src="/js/app.js"></script>  
 <%- include('./partials/footer.ejs') %>
