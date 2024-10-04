@@ -278,7 +278,6 @@ footer {
   user-select: none;
   overflow-x: hidden;
   -webkit-user-drag: none;
-  scroll-behavior: smooth;
 }
 
 .chapterImageDiv {
