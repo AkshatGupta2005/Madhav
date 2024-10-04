@@ -83,7 +83,7 @@ app.post("/searchVerse", async (req, res) => {
   }
 });
 app.get("/nextChapter/:chapter_number/:language", async (req, res) => {
-  console.log(chapter_number);
+  const chapter_number = req.params.language;
   const language = req.params.language;
   try {
     const response = await axios.get(
