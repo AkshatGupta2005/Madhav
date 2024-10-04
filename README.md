@@ -34,11 +34,10 @@ Whether you are a spiritual seeker or a curious reader, Madhav aims to provide a
 ---
 
 ## Tech Stack
-- **Frontend**: HTML, CSS, JavaScript (React/Next.js or other library if applicable)
+- **Frontend**: HTML, CSS, JavaScript, EJS
 - **Backend**: Node.js, Express
-- **Database**: MongoDB (or any relevant database you’re using)
-- **Email Service**: Nodemailer (or any email service for auto-response)
-- **Hosting**: Render (or any platform you are using)
+- **Email Service**: Nodemailer 
+- **Hosting**: Render
 
 ---
 
