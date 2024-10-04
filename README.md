@@ -1,6 +1,5 @@
 # Madhav - The Bhagwad Gita Experience
 
-![Madhav Logo](path/to/logo.png)
 
 ### Discover the timeless teachings of the Bhagwad Gita, now accessible online with Madhav.
 
