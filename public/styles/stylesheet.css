@@ -251,7 +251,6 @@ footer {
   flex-direction: column;
   margin-left: 1.2em;
   margin-right: 1.2em;
-  scroll-behavior: smooth;
 }
 .chapterHeading {
   text-align: center;
@@ -268,7 +267,6 @@ footer {
   padding-left: 2em;
   border-radius: 1em;
   padding-right: 3em;
-  scroll-behavior: smooth;
   user-select: none;
   -webkit-user-drag: none;
   white-space: nowrap;
@@ -278,7 +276,6 @@ footer {
   user-select: none;
   overflow-x: hidden;
   -webkit-user-drag: none;
-  scroll-behavior: smooth;
 }
 
 .chapterImageDiv {
