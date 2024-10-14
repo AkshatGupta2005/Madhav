@@ -104,26 +104,24 @@
       </div>
       
 <% } else {%> 
-<div class="chapterDetail">
+  <div class="chapterDetail">
     <img src="/images/krishnaPngOrignal2.jpeg" alt="Krishna Image" class="authorPhoto webImage">
     <div class="verseTab amita-regular orange ">।। श्री कृष्णा शरणम ममः ।।</div>
     <h2 class="chapterHeading m-plus-1p-medium verseHeading1">Search Verse</h2>
     <h4 class="chapterHeading m-plus-1p-medium verseHeading2">Search By Chapter</h4>
   </div>
   <div class="verseSearchBar">
-    <form action="/searchVerse" method="post">
-      <div class="verseSearch chapterSearch">   
-        <div class="part1">
-          <input type="text" class="searchInput m-plus-1p-medium" placeholder="Chapter" name="chapterNumber" required>
-          <input type="text" class="searchInput m-plus-1p-medium searchVerse" placeholder="Verse" name="verseNumber" required>
-        </div>
-        <div class="part2">
-          <select name="language" class="verseLanguageSearch" required>
-            <option value="english">English</option>
-            <option value="hindi">हिन्दी</option>
-          </select>
-          <input type="submit" class="m-plus-1p-medium searchSubmit" value="Go">
-        </div>
+    <form action="/searchVerse" method="post" class="verseForm">  
+      <div class="part1">
+        <input type="text" class="verseSearchInput verseSearchElement m-plus-1p-medium" placeholder="Chapter" name="chapterNumber" required>
+        <input type="text" class="verseSearchInput m-plus-1p-medium searchVerse verseSearchElement" placeholder="Verse" name="verseNumber" required>
+      </div>
+      <div class="part2">
+        <select name="language" class="verseLanguageSearch verseSearchElement" required>
+          <option value="english">English</option>
+          <option value="hindi">हिन्दी</option>
+        </select>
+        <input type="submit" class="m-plus-1p-medium searchSubmit verseSearchElement" value="Go">
       </div>
     </form>
   </div>

@@ -78,15 +78,15 @@
     <h2 class="chapterHeading m-plus-1p-medium verseHeading1">Search Chapters</h2>
     <h4 class="chapterHeading m-plus-1p-medium verseHeading2">Search By Number</h4>
   </div>
-  <div class="searchBar">
-    <div class="search chapterSearch">
-      <form action="/searchChapter" method="post">
-        <input type="text" class="searchInput m-plus-1p-medium" placeholder="Search" name="chapterNumber" required>
-        <select name="language" class="languageSearch" required>
+  <div class="chapterSearchBar">
+    <div class="chapterSearchDiv">
+      <form action="/searchChapter" method="post" class="chapterForm">
+        <input type="text" class="chapterNumberSearch chapterSearchItem m-plus-1p-medium" placeholder="Search" name="chapterNumber" required>
+        <select name="language" class="chapterLanguageSearch chapterSearchItem" required>
           <option value="english">English</option>
           <option value="hindi">हिन्दी</option>
         </select>
-        <input type="submit" class="searchSubmit m-plus-1p-medium chapterSubmit" value="Go">
+        <input type="submit" class="chapterSubmit chapterSearchItem m-plus-1p-medium" value="Go">
       </form>
     </div>
   </div>

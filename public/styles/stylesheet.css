@@ -518,6 +518,7 @@ footer {
 .hindiVerse {
   margin-left: 0px;
 }
+
 .verseHeading {
   display: flex;
   flex-direction: column;
@@ -548,34 +549,7 @@ footer {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
 }
-.search {
-  height: 4em;
-  margin-left: 2em;
-  display: flex;
-  justify-content: center;
-}
-.searchInput {
-  width: 4em;
-  height: 1.5em;
-  padding: 0.5em;
-  font-size: 1.3em;
-  margin-bottom: 0.5em;
-  border: 1px solid #00712d;
-  background-color: #d5ed9f;
-  color: #00712d;
-  border-radius: 30px 0px 0px 30px;
-}
-.searchSubmit {
-  text-align: center;
-  width: 3em;
-  padding: 0.5em;
-  font-size: 1.3em;
-  margin-bottom: 0.5em;
-  margin-right: 0.5em;
-  background-color: #00712d;
-  color: whitesmoke;
-  border-radius: 0px 30px 30px 0px;
-}
+
 .authorDiv {
   display: flex;
   flex-direction: column;
@@ -589,51 +563,57 @@ footer {
 .authorSummary {
   margin-top: 0.5em;
   width: 78%;
+} 
+.verseSearchBar {
+  width: 100%;
+  height: 3em;
+  display: flex;
+  
+  justify-content: center;
+  margin-bottom: 4em;
 }
-.languageSearch {
-  height: 2.5em;
-  border: 1px solid #00712d;
+.verseForm{
+  height: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.verseSearchElement{
   background-color: #d5ed9f;
-  color: #00712d;
-  margin-right: 0.2em;
-  margin-left: 0.2em;
-  margin-bottom: 0.5em;
-  font-size: 1.3em;
+  font-size: 1.2em;
+  color: #015c25;
+  height: 100%;
+}
+.verseSearchInput {
+  width: 4em;
+  height: 100%;
+  padding: 0 0.5em;
+  font-size: 1.2em;
+  border: 1px solid #00712d;
+  border-radius: 15px;
 }
 .verseLanguageSearch {
   height: 100%;
   border: 1px solid #00712d;
   background-color: #d5ed9f;
   color: #00712d;
-  margin-right: 0.2em;
-  margin-left: 0.2em;
-  margin-bottom: 0.5em;
-  font-size: 1.3em;
+  border-radius: 15px;
 }
-
-.chapterSearch {
-  margin-left: 0;
-}
-.searchVerse {
-  border-radius: 0;
-  margin-left: 0.2em;
-}
-.verseSearchBar {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.verseSearch {
-  width: 100%;
-  height: auto;
-  display: flex;
-}
+.searchSubmit {
+  text-align: center;
+  width: 2.5em;
+  padding: 0 0.5em;
+  font-size: 1.2em;
+  background-color: #00712d;
+  color: whitesmoke;
+  border-radius: 50%;
+} 
 .part1,
 .part2 {
   display: flex;
+  height: 100%;
+  gap: 10px;
 }
 .part2 *,
 .part1 * {
@@ -743,6 +723,37 @@ footer {
 .chapterNext {
   width: 8em;
 }
+.chapterSearchBar{
+  width: 100%;
+  height: 3.2em;
+  display: flex;
+  justify-content: center;
+}
+.chapterSearchDiv{
+  height: 100%;
+}
+.chapterForm{
+  height: 100%;
+  gap: 12px;
+}
+.chapterSearchItem{
+  height: 100%;
+  background-color: #d5ed9f;
+  color: #015c25;
+  font-size: 1.3em;
+  padding: 0.1em;
+  border-radius: 15px;
+  padding: 0 0.4em;
+}
+.chapterNumberSearch{
+  width: 4em;
+}
+.chapterSubmit{
+  width: 2.5em;
+  border-radius: 50%;
+  background-color: #00712d;
+  color: whitesmoke;
+}
 @media screen and (max-width: 600px) {
   .headerFunction {
     display: none;
@@ -849,25 +860,6 @@ footer {
   }
   .chapterWebImage {
     height: 45vh;
-  }
-}
-@media screen and (max-width: 470px) {
-  .verseSearch {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .part1 .searchVerse {
-    border-radius: 0 30px 30px 0;
-  }
-  .part2 .verseLanguageSearch {
-    border-radius: 30px 0 0 30px;
-  }
-  .part2 {
-    display: flex;
-    justify-content: center;
-  }
-  .part2 * {
-    height: auto;
   }
 }
 @keyframes l1 {
